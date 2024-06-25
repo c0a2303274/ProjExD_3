@@ -160,7 +160,7 @@ class Score():
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.color = (0, 0, 255)
         self.score = 0
-        self.img = self.fonto.render(f"{self.score}", 0, self.color)
+        self.img = self.fonto.render(f"スコア:{self.score}", 0, self.color)
         self.rct = self.img.get_rect()
         self.rct.centerx = 100
         self.rct.centery = HEIGHT - 50
@@ -170,7 +170,7 @@ class Score():
         scoreを画面左下に描画する
         引数 screen:画面Surface
         """
-        self.img = self.fonto.render(f"{self.score}", 0, self.color)
+        self.img = self.fonto.render(f"スコア:{self.score}", 0, self.color)
         screen.blit(self.img, self.rct)
 
 class Explosion():
